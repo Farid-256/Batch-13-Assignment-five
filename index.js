@@ -215,14 +215,14 @@ function showModal(issue) {
     modal.showModal();
 }
 
-// Date format
+
 function formatDate(dateStr) {
     if (!dateStr) return 'Unknown date';
     const date = new Date(dateStr);
     return date.toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' });
 }
 
-// Debounce
+
 function debounce(func, delay) {
     let timeout;
     return function (...args) {
@@ -231,7 +231,7 @@ function debounce(func, delay) {
     };
 }
 
-// Count update
+
 function updateIssueCount(count, tab) {
     let text = `${count} Issues`;
 
