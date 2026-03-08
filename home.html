@@ -14,24 +14,26 @@
     <main class="bg-gray-50">
         <section id="main-content">
             <!-- Navbar -->
-            <nav class="bg-white shadow-lg sticky py-5">
+            <nav class="bg-white shadow sticky top-0 z-40">
                 <div class="w-[90%] mx-auto px-4">
-                    <div class="flex justify-between h-16 items-center">
-                        <div class="flex items-center">
-                            <div>
-                                <img class="w-[50px]" src="./assets/github-logo.png" alt="">
-                            </div>
-                            <span class="ml-3 text-xl font-bold text-gray-900">GitHub Issues Tracker</span>
+                    <div class="flex justify-between items-center h-16">
+                        <div class="flex-1 flex items-center justify-center md:justify-start">
+                            <img class="w-10 md:w-[50px]" src="./assets/github-logo.png" alt="GitHub Logo">
+                            <span class="hidden md:inline-block ml-3 text-lg md:text-xl font-bold text-gray-900">
+                                GitHub Issues Tracker
+                            </span>
                         </div>
 
-
+                        
                         <div class="flex items-center gap-2">
-                            <div class="relative w-64">
+                            <div class="relative w-48 md:w-64">
                                 <input id="search-input" type="text" placeholder="Search issues..."
-                                    class="input input-bordered w-full pr-10 border border-gray-300" />
+                                    class="input input-bordered w-full pr-10" />
                             </div>
-                            <button id="search-btn" class="bg-blue-700 text-white px-5 py-2
-                            rounded-md hover:bg-blue-500 hover:text-white">Search</button>
+                            <button id="search-btn"
+                                class="bg-blue-700 text-white px-4 md:px-5 py-2 rounded-md hover:bg-blue-500">
+                                + New Issue
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -53,7 +55,7 @@
 
 
             <div class="bg-white px-5 py-10 rounded-sm flex justify-between items-center">
-                <div class="flex items-center gap-2">
+                <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-4">
                     <div>
                         <img src="./assets/Aperture.png" alt="">
                     </div>
@@ -93,13 +95,14 @@
             <div id="issues-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
 
             </div>
-            
+
 
             <!-- Modal -->
             <dialog id="issue-modal" class="modal">
                 <div class="modal-box max-w-3xl">
                     <form method="dialog" class="flex justify-end">
-                        <button class="bg-blue-700 text-white border-none px-5 py-2 hover:bg-blue-500 hover:text-yellow-500">Close</button>
+                        <button
+                            class="bg-blue-700 text-white border-none px-5 py-2 hover:bg-blue-500 hover:text-yellow-500">Close</button>
                     </form>
                     <h3 id="modal-title" class="font-bold text-xl mb-4"></h3>
                     <div id="modal-body" class="space-y-4 text-gray-700"></div>
